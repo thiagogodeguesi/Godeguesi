@@ -1,75 +1,237 @@
 # Godeguesi
-Site [Godeguesi](www.goseguesi.com.br)
 
-## Criacao do site
-Prentendendo criar varias solucoes, conforme o tempo tambem colocarei esperiencias e casos ja trabalhados e possivelmente com modelos.
-Irei trazer espectativa (Historia do cliente), solucao aplicada (solucao aplicada com pros e contras, juntamente possiveis solucoes que encontramos), desefios do desenvolvimento (desafio encontrado ao se desenvolver, como bugs, erros e acertos e solucoes encontradas para atender).
+Portfólio profissional de **Thiago Godeguesi**, criado para apresentar sua evolução técnica, experiência prática e capacidade de transformar problemas complexos em soluções de dados, automação e software.
 
-Toda e qualquer dica, reclamacao ou sugestao, estou disponivel no email. thiago@godeguesi.com.br
+## Visão
 
-## **Indice**
+O Godeguesi será o ponto central da presença profissional de Thiago, reunindo trajetória, competências, projetos e estudos de caso com foco principal em Engenharia de Dados.
 
-1. **Roteiro**
-2. **Desenvolvimento**
-3. **Solucões Utilizadas**
+A proposta não é apenas listar tecnologias, mas demonstrar:
 
-## **Roteiros**
-Não nescessariamente sera criado na sequencia que esta na nossa lista, mas o que esta na lista esta criado, e/ou desenvolvimento, ou em planejamento.
+- evolução profissional ao longo do tempo;
+- problemas reais enfrentados;
+- decisões técnicas adotadas;
+- resultados alcançados;
+- capacidade de aprendizado, adaptação e execução;
+- experiência com ambientes legados e modernos;
+- desenvolvimento de soluções próprias com qualidade, testes e arquitetura.
 
-1. **Criação do site.**
-   A ideia é que deixe na nossa pagina principal um pouco do nosso curriculo, com exemplos de teste e aplicacoes utilizadas. 
+## Posicionamento profissional
 
-2. **Criação do formulario.**
-   Sera criado um formulario que sera utilizado para modelos de dados, apesar de ter poucos informacoes sera utilizados para proporcionar testes.
+**Engenheiro de Dados com atuação em modernização de ambientes, automação, qualidade de dados, otimização de custos e evolução de processos.**
 
-3. **API Visitantes.**
-   Api para cadastrar os dados dos visitantes do site ja esta e, desenvolvimento em python + Swagger.
-   A API de visitantes nao estara disponivel para consulmo, mas sera criado algumas que estara para o cunsumo. 
-   
+### Competências em destaque
 
-   ## POST
-   O post sera aonde sera gravado as informacoes do formulario dos visitantes. 
+- Engenharia e arquitetura de dados;
+- BigQuery;
+- Dataform;
+- Databricks;
+- Azure Data Factory;
+- Python;
+- APIs e FastAPI;
+- PostgreSQL;
+- automação de processos;
+- qualidade, governança e rastreabilidade;
+- testes de integração e E2E;
+- CI/CD e práticas de desenvolvimento;
+- arquitetura de produtos SaaS.
 
-   ## GET
-   O get podera ser buscado `as informacoes dos visitantes. (obs1)
-   
-   ## GET {ID} - *No momento nao disponivel.*
-   Seu funcionamento e muito parecido com o funcionamento do *GET*, mas ao inves de retornar todos os dados, retornara apenas o dado selecionado pelo *ID*.
+## Mensagem central
 
-   ## PUT - *Não disponivel*
-   Na API de visitante nao interessa a alteracao dos dados. 
+> **Transformando problemas complexos em soluções de dados, automação e software que evoluem junto com o negócio.**
 
-   ## DELETE - *Não disponivel*
-   Na API de visitantes nao existe o interesse de excluir esses dados.
+Minha trajetória profissional foi construída resolvendo problemas reais, modernizando processos, estruturando ambientes de dados e desenvolvendo soluções que conectam engenharia, automação e produto.
 
+## Projetos iniciais
 
-# Desenvolvimento
-O site no momento dessa escrita tinha apenas um "Hello World".
-Mas com o tempo sera criado uma forma que possa gerar interacoes entre os visitantes e o criador deste site.
+### 1. Modernização de ambiente de Engenharia de Dados
 
-## Site 
-O site nao temos nada definido sobre qual tecnologia que sera utilizado, penso que sera uma juncao de varias tecnologias, não sei como sera e como ira funcionar, mas sera assim.
+Estudo de caso baseado em uma **empresa do ramo de seguros**, sem identificação da organização, pessoas, clientes ou sistemas internos.
 
-* **Pagina Home** - Possivelmente tera algumas informacoes de projetos que estamos tocando e mesmo o que ja fizemos.
+Temas previstos:
 
-* **Pagina Visitantes** - Teremos uma pagina aonde os visitantes poderao informar dados para podermos usar em nossos teste. 
-Essa pagina tem um relacionamento com o POST de nossa API de visitantes. 
-A ideia é utilizar os dados para futuros testes como, nome mais cadastrado, sobrenome mais utilizado, quantos utilizam provedor XYZ, cidades e estados.
-Nao sendo obrigatorio nenhuma informacao.
-Essa pagina estou pensando em criar em PHP, mas nao planejado, devo analizar tambem a utilizacao de HTML com Bootstrap. 
+- cenário inicial e restrições do ambiente;
+- modernização de pipelines;
+- BigQuery, Dataform, Databricks e Azure Data Factory;
+- padronização de datasets, tabelas e campos;
+- estratégias de cargas incrementais;
+- qualidade, governança e rastreabilidade;
+- otimização de custos e desempenho;
+- dependências e referências circulares;
+- evolução de um ambiente com centenas de objetos.
 
+### 2. Plataforma SaaS Olimpo
 
+Apresentação do Olimpo como projeto completo, incluindo:
 
-***DEIXO CLARAMENTE EXPLICADO QUE OS DADOS UTILIZADOS PODERAO SER UTILIZADOS EM TESTES, MAS NAO ESTARA DISPONIVEL O DADO DO 'EMAIL'. NÃO A INTENSAO DE VENDER OU UTILIZAR OS DADOS PARA MARKETING NO MOMENTO DESTE, CASO HAJA QUALQUER QUER INTENSAO DESTA A MESMA SERA INFORMADA NO EMAIL CADASTRADO.***
+- problema de negócio;
+- arquitetura geral;
+- backend em Python e FastAPI;
+- PostgreSQL;
+- autenticação JWT;
+- isolamento multi-tenant;
+- organização modular;
+- testes de integração e E2E;
+- infraestrutura e ambientes;
+- CI/CD e qualidade de código;
+- frontend em Next.js;
+- gestão por cards, esteiras e versões.
 
-## API Visitantes
-Nesta API queria utilizar o swagger para ter uma integracao inicial. 
-A principio a mesma utiliza Python + Flask. E para auxiliar nas documentacoes futuras tentei fazer uma forma de utilizar o Swagger. Nao irei mentir mas sofri um pouco por conta das versoes do Flask, mas no final esta dando certo. 
+### 3. Gerenciamento de e-commerce
 
-   
+Estudo de caso sobre uma solução de gerenciamento de e-commerce, que deverá apresentar:
 
-# Soluções utilizadas
+- contexto e problema inicial;
+- processos gerenciados;
+- arquitetura e integrações;
+- automações;
+- produtos, pedidos, estoque ou operações;
+- tecnologias utilizadas;
+- resultados alcançados;
+- possibilidades de evolução.
 
-O site pretendo utilizar PHP. ?
+O detalhamento técnico desse estudo de caso será refinado antes da publicação.
 
-A API dos Visitantes esta criada em Python + Flask + Swagger.
+## Política de anonimização
+
+Projetos profissionais e trabalhos relacionados a terceiros deverão ser apresentados de forma anonimizada.
+
+### Formas permitidas de identificação
+
+- empresa do ramo de seguros;
+- empresa do segmento de e-commerce;
+- empresa do setor financeiro;
+- cliente do segmento de saúde;
+- ambiente corporativo de grande porte;
+- plataforma com centenas de objetos de dados.
+
+### Informações que não podem ser publicadas
+
+- nome de empresas, clientes, gestores ou funcionários;
+- sistemas, URLs ou endereços IP internos;
+- credenciais, tokens, chaves ou segredos;
+- dados pessoais ou dados de clientes;
+- consultas completas de ambientes corporativos;
+- screenshots e documentos que identifiquem organizações;
+- valores contratuais;
+- informações capazes de prejudicar empresas atuais ou encerradas.
+
+Problemas devem ser descritos de forma técnica, neutra e sem julgamento de pessoas ou organizações.
+
+## Direção visual
+
+A identidade visual deverá ser:
+
+- clean;
+- moderna;
+- avançada;
+- futurista;
+- profissional;
+- tecnológica;
+- minimalista.
+
+### Direção inicial
+
+- base escura ou grafite;
+- alto contraste e áreas de respiro;
+- tipografia moderna e legível;
+- linhas finas e elementos geométricos;
+- gradientes discretos;
+- destaques em azul, ciano, violeta ou verde tecnológico;
+- cards com bordas sutis;
+- glassmorphism com moderação;
+- animações suaves;
+- referências visuais a dados, nós, pipelines, camadas e evolução.
+
+A identidade não deverá parecer um template genérico de desenvolvedor.
+
+## Stack técnica recomendada
+
+- Next.js com App Router;
+- TypeScript;
+- Tailwind CSS;
+- ESLint;
+- Prettier;
+- Vitest;
+- Testing Library;
+- Playwright para fluxos navegáveis;
+- npm;
+- Node.js LTS;
+- deploy estático sempre que possível.
+
+## Domínio e hospedagem
+
+### Domínio
+
+- `godeguesi.com.br`;
+- suporte ao domínio com e sem `www`;
+- redirecionamento canônico;
+- HTTPS obrigatório.
+
+### Estratégia inicial
+
+- hospedagem na Vercel;
+- DNS e proteção de borda pela Cloudflare;
+- deploy automático a partir da branch `main`;
+- preview automático para pull requests.
+
+## Canais de contato
+
+O portfólio poderá apresentar:
+
+- WhatsApp pessoal;
+- e-mail pessoal;
+- LinkedIn;
+- GitHub.
+
+O WhatsApp deverá ser disponibilizado preferencialmente por botão com mensagem inicial. O endereço de e-mail deverá receber proteção mínima contra coleta automatizada.
+
+No futuro, poderá ser adotado um endereço no domínio, como `contato@godeguesi.com.br`.
+
+## Escopo do MVP
+
+O primeiro lançamento deverá conter:
+
+- Home;
+- página Sobre;
+- catálogo de projetos;
+- pelo menos um estudo de caso completo;
+- LinkedIn, GitHub, e-mail e WhatsApp;
+- layout responsivo;
+- SEO básico;
+- acessibilidade essencial;
+- publicação no domínio oficial.
+
+## Evoluções pós-MVP
+
+- três estudos de caso completos;
+- blog ou artigos técnicos;
+- conteúdo em português e inglês;
+- currículo para visualização e download;
+- CMS;
+- formulário de contato protegido contra spam;
+- métricas de uso respeitando privacidade.
+
+## Fluxo de desenvolvimento
+
+O trabalho será executado por card.
+
+1. Cada card deve possuir escopo e critérios de aceite claros.
+2. Cada card deve ser desenvolvido em uma branch própria.
+3. Não são permitidos commits diretos na `main` para mudanças relevantes.
+4. Cada entrega deve gerar um pull request.
+5. Antes do PR, devem ser executados lint, typecheck, testes e build.
+6. O próximo card só começa após a sincronização com a `main` atualizada.
+7. Mudanças fora do escopo devem ser registradas em outro card.
+
+Consulte também o arquivo [`CLAUDE.md`](./CLAUDE.md), que contém as regras operacionais para atuação do Claude no projeto.
+
+## Status atual
+
+O projeto está na fase de fundação e preparação para o início da implementação do MVP.
+
+As decisões estratégicas estão registradas nas issues do repositório. A execução técnica deverá começar pela fundação da aplicação Next.js e seguir a ordem definida no roadmap.
+
+## Licença
+
+A licença do projeto ainda será definida.
