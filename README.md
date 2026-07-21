@@ -2,6 +2,46 @@
 
 Portfólio profissional de **Thiago Godeguesi**, criado para apresentar evolução técnica, experiência prática e capacidade de transformar problemas complexos em soluções de dados, automação e software.
 
+## Fundação técnica
+
+A aplicação foi inicializada com Next.js App Router, TypeScript em modo estrito, Tailwind CSS, ESLint, Prettier, Vitest e Testing Library. A renderização deve permanecer estática sempre que possível.
+
+### Requisitos
+
+- Node.js LTS compatível com o projeto (`>=22.0.0`);
+- npm.
+
+### Execução local
+
+1. Instale as dependências:
+
+   ```bash
+   npm ci
+   ```
+
+2. Copie as variáveis de ambiente de exemplo quando precisar configurar valores locais:
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+3. Inicie a aplicação em modo desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Acesse `http://localhost:3000`.
+
+### Scripts disponíveis
+
+```bash
+npm run lint
+npm run typecheck
+npm run test
+npm run build
+```
+
 ## Visão
 
 O Godeguesi será o ponto central da presença profissional de Thiago, reunindo trajetória, competências, projetos e estudos de caso com foco principal em Engenharia de Dados.
