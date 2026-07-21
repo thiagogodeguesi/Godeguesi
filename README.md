@@ -1,6 +1,6 @@
 # Godeguesi
 
-Portfólio profissional de **Thiago Godeguesi**, criado para apresentar sua evolução técnica, experiência prática e capacidade de transformar problemas complexos em soluções de dados, automação e software.
+Portfólio profissional de **Thiago Godeguesi**, criado para apresentar evolução técnica, experiência prática e capacidade de transformar problemas complexos em soluções de dados, automação e software.
 
 ## Visão
 
@@ -8,7 +8,7 @@ O Godeguesi será o ponto central da presença profissional de Thiago, reunindo 
 
 A proposta não é apenas listar tecnologias, mas demonstrar:
 
-- evolução profissional ao longo do tempo;
+- evolução profissional;
 - problemas reais enfrentados;
 - decisões técnicas adotadas;
 - resultados alcançados;
@@ -50,11 +50,10 @@ Estudo de caso baseado em uma **empresa do ramo de seguros**, sem identificaçã
 
 Temas previstos:
 
-- cenário inicial e restrições do ambiente;
 - modernização de pipelines;
 - BigQuery, Dataform, Databricks e Azure Data Factory;
 - padronização de datasets, tabelas e campos;
-- estratégias de cargas incrementais;
+- cargas incrementais;
 - qualidade, governança e rastreabilidade;
 - otimização de custos e desempenho;
 - dependências e referências circulares;
@@ -62,57 +61,24 @@ Temas previstos:
 
 ### 2. Plataforma SaaS Olimpo
 
-Apresentação do Olimpo como projeto completo, incluindo:
-
-- problema de negócio;
-- arquitetura geral;
-- backend em Python e FastAPI;
-- PostgreSQL;
-- autenticação JWT;
-- isolamento multi-tenant;
-- organização modular;
-- testes de integração e E2E;
-- infraestrutura e ambientes;
-- CI/CD e qualidade de código;
-- frontend em Next.js;
-- gestão por cards, esteiras e versões.
+Apresentação do Olimpo como projeto completo, incluindo arquitetura, FastAPI, PostgreSQL, JWT, isolamento multi-tenant, testes, infraestrutura, CI/CD, frontend em Next.js e gestão por cards, esteiras e versões.
 
 ### 3. Gerenciamento de e-commerce
 
-Estudo de caso sobre uma solução de gerenciamento de e-commerce, que deverá apresentar:
-
-- contexto e problema inicial;
-- processos gerenciados;
-- arquitetura e integrações;
-- automações;
-- produtos, pedidos, estoque ou operações;
-- tecnologias utilizadas;
-- resultados alcançados;
-- possibilidades de evolução.
-
-O detalhamento técnico desse estudo de caso será refinado antes da publicação.
+Estudo de caso sobre uma solução de gerenciamento de e-commerce, cobrindo contexto, processos, arquitetura, integrações, automações, tecnologias, resultados e possibilidades de evolução.
 
 ## Política de anonimização
 
 Projetos profissionais e trabalhos relacionados a terceiros deverão ser apresentados de forma anonimizada.
 
-### Formas permitidas de identificação
+Não podem ser publicados:
 
-- empresa do ramo de seguros;
-- empresa do segmento de e-commerce;
-- empresa do setor financeiro;
-- cliente do segmento de saúde;
-- ambiente corporativo de grande porte;
-- plataforma com centenas de objetos de dados.
-
-### Informações que não podem ser publicadas
-
-- nome de empresas, clientes, gestores ou funcionários;
-- sistemas, URLs ou endereços IP internos;
+- nomes de empresas, clientes, gestores ou funcionários;
+- sistemas, URLs ou IPs internos;
 - credenciais, tokens, chaves ou segredos;
-- dados pessoais ou dados de clientes;
+- dados pessoais ou de clientes;
 - consultas completas de ambientes corporativos;
-- screenshots e documentos que identifiquem organizações;
+- screenshots ou documentos identificáveis;
 - valores contratuais;
 - informações capazes de prejudicar empresas atuais ou encerradas.
 
@@ -120,17 +86,9 @@ Problemas devem ser descritos de forma técnica, neutra e sem julgamento de pess
 
 ## Direção visual
 
-A identidade visual deverá ser:
+A identidade será clean, moderna, avançada, futurista, profissional, tecnológica e minimalista.
 
-- clean;
-- moderna;
-- avançada;
-- futurista;
-- profissional;
-- tecnológica;
-- minimalista.
-
-### Direção inicial
+Direção inicial:
 
 - base escura ou grafite;
 - alto contraste e áreas de respiro;
@@ -145,7 +103,7 @@ A identidade visual deverá ser:
 
 A identidade não deverá parecer um template genérico de desenvolvedor.
 
-## Stack técnica recomendada
+## Stack técnica
 
 - Next.js com App Router;
 - TypeScript;
@@ -154,49 +112,31 @@ A identidade não deverá parecer um template genérico de desenvolvedor.
 - Prettier;
 - Vitest;
 - Testing Library;
-- Playwright para fluxos navegáveis;
+- Playwright;
 - npm;
 - Node.js LTS;
 - deploy estático sempre que possível.
 
 ## Domínio e hospedagem
 
-### Domínio
-
-- `godeguesi.com.br`;
-- suporte ao domínio com e sem `www`;
-- redirecionamento canônico;
-- HTTPS obrigatório.
-
-### Estratégia inicial
-
-- hospedagem na Vercel;
+- domínio: `godeguesi.com.br`;
+- hospedagem prevista na Vercel;
 - DNS e proteção de borda pela Cloudflare;
-- deploy automático a partir da branch `main`;
-- preview automático para pull requests.
+- deploy automático a partir da `main`;
+- preview automático para pull requests;
+- HTTPS obrigatório.
 
 ## Canais de contato
 
-O portfólio poderá apresentar:
-
-- WhatsApp pessoal;
-- e-mail pessoal;
-- LinkedIn;
-- GitHub.
-
-O WhatsApp deverá ser disponibilizado preferencialmente por botão com mensagem inicial. O endereço de e-mail deverá receber proteção mínima contra coleta automatizada.
-
-No futuro, poderá ser adotado um endereço no domínio, como `contato@godeguesi.com.br`.
+O portfólio poderá apresentar WhatsApp pessoal, e-mail pessoal, LinkedIn e GitHub. Os dados definitivos serão centralizados em configuração própria e nunca deverão ser inventados.
 
 ## Escopo do MVP
-
-O primeiro lançamento deverá conter:
 
 - Home;
 - página Sobre;
 - catálogo de projetos;
 - pelo menos um estudo de caso completo;
-- LinkedIn, GitHub, e-mail e WhatsApp;
+- canais de contato;
 - layout responsivo;
 - SEO básico;
 - acessibilidade essencial;
@@ -209,28 +149,30 @@ O primeiro lançamento deverá conter:
 - conteúdo em português e inglês;
 - currículo para visualização e download;
 - CMS;
-- formulário de contato protegido contra spam;
+- formulário protegido contra spam;
 - métricas de uso respeitando privacidade.
 
-## Fluxo de desenvolvimento
+## Fluxo de desenvolvimento com Codex
 
-O trabalho será executado por card.
+O projeto será executado por card ou issue.
 
-1. Cada card deve possuir escopo e critérios de aceite claros.
-2. Cada card deve ser desenvolvido em uma branch própria.
-3. Não são permitidos commits diretos na `main` para mudanças relevantes.
-4. Cada entrega deve gerar um pull request.
-5. Antes do PR, devem ser executados lint, typecheck, testes e build.
-6. O próximo card só começa após a sincronização com a `main` atualizada.
-7. Mudanças fora do escopo devem ser registradas em outro card.
+1. Cada card deve possuir objetivo, escopo e critérios de aceite claros.
+2. O Codex deve trabalhar em apenas um card por tarefa.
+3. Cada card deve usar uma branch própria criada a partir da `main` atualizada.
+4. Não são permitidos commits diretos na `main` para mudanças relevantes.
+5. Cada entrega deve gerar um pull request independente.
+6. Antes do PR, devem ser executados lint, typecheck, testes e build.
+7. O Codex não deve realizar o merge sem instrução explícita.
+8. O próximo card começa somente após a sincronização com a `main` atualizada.
+9. Mudanças fora do escopo devem ser registradas em outro card.
 
-Consulte também o arquivo [`CLAUDE.md`](./CLAUDE.md), que contém as regras operacionais para atuação do Claude no projeto.
+As regras operacionais completas estão em [`AGENTS.md`](./AGENTS.md), arquivo reconhecido pelo Codex para instruções do repositório.
+
+O Godeguesi poderá ser desenvolvido pelo Codex Web conectado ao GitHub, enquanto o Olimpo permanece em desenvolvimento no Codex Desktop. Os dois fluxos não devem compartilhar branches ou diretórios locais.
 
 ## Status atual
 
-O projeto está na fase de fundação e preparação para o início da implementação do MVP.
-
-As decisões estratégicas estão registradas nas issues do repositório. A execução técnica deverá começar pela fundação da aplicação Next.js e seguir a ordem definida no roadmap.
+O projeto está na fase de fundação e preparação para a implementação do MVP. As decisões estratégicas estão registradas nas issues do repositório.
 
 ## Licença
 
