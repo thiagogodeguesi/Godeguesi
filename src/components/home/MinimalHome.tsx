@@ -1,3 +1,5 @@
+import React from "react";
+
 export function MinimalHome() {
   return (
     <main className="min-h-screen bg-slate-950 px-6 py-16 text-slate-100">
