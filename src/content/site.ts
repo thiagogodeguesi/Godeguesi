@@ -10,7 +10,11 @@ export const siteConfig = {
     { href: "/estudos-de-caso", label: "Estudos de caso" },
     { href: "/contato", label: "Contato" },
   ],
-  contacts: [] as const,
+  contacts: {
+    email: "thiagogodeguesi@gmail.com",
+    linkedin: "https://www.linkedin.com/in/thiagogodeguesi",
+    github: "https://github.com/thiagogodeguesi",
+  },
 } as const;
 
 export const professionalProfile = {

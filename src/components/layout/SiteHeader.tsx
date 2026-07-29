@@ -11,7 +11,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-header border-b border-border bg-background/95 py-3 backdrop-blur-sm">
       <Container className="flex flex-wrap items-center justify-between gap-3">
         <Link className="text-lg font-semibold tracking-tight text-foreground" href="/">
-          {siteConfig.name}
+          {siteConfig.professionalName}
         </Link>
         <Button aria-controls="primary-navigation" aria-expanded={open} className="sm:hidden" onClick={() => setOpen((value) => !value)} variant="secondary">
           Menu
