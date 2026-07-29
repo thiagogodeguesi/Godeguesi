@@ -1,24 +1,101 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: var(--surface-background);
+  --color-surface: var(--surface-raised);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-foreground: var(--text-primary);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent-primary);
+  --color-accent-strong: var(--accent-strong);
+  --color-border: var(--border-default);
+  --color-border-strong: var(--border-emphasis);
+
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --spacing-section: clamp(4rem, 8vw, 7rem);
+  --spacing-gutter: clamp(1.25rem, 4vw, 2rem);
+
+  --radius-control: 0.75rem;
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+
+  --shadow-card: 0 1rem 3rem
+    color-mix(in srgb, var(--shadow-color) 18%, transparent);
+  --shadow-focus: 0 0 0 3px
+    color-mix(in srgb, var(--accent-primary) 35%, transparent);
+
+  --container-content: 72rem;
+  --container-reading: 48rem;
+
+  --z-header: 40;
+  --z-overlay: 50;
+
+  --ease-interface: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --default-transition-duration: 180ms;
+  --default-transition-timing-function: var(--ease-interface);
+}
+
 :root {
-  color-scheme: dark;
-  background: #020617;
+  color-scheme: light;
+  --surface-background: #f8fafc;
+  --surface-raised: #ffffff;
+  --surface-subtle: #eef2f6;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --accent-primary: #0369a1;
+  --accent-strong: #075985;
+  --border-default: #cbd5e1;
+  --border-emphasis: #94a3b8;
+  --shadow-color: #0f172a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --surface-background: #020617;
+    --surface-raised: #0f172a;
+    --surface-subtle: #172033;
+    --text-primary: #f8fafc;
+    --text-muted: #cbd5e1;
+    --accent-primary: #67e8f9;
+    --accent-strong: #a5f3fc;
+    --border-default: #334155;
+    --border-emphasis: #64748b;
+    --shadow-color: #000000;
+  }
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   min-height: 100%;
 }
 
 body {
-  min-height: 100%;
   margin: 0;
-  background: #020617;
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  background: var(--surface-background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
