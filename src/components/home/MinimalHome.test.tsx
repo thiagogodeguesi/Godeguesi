@@ -2,14 +2,14 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { MinimalHome } from "./MinimalHome";
+import Home from "@/app/page";
 
-describe("MinimalHome", () => {
-  it("renders the initial portfolio foundation message", () => {
-    render(<MinimalHome />);
+describe("Home", () => {
+  it("renders the professional portfolio message", () => {
+    render(<Home />);
 
     expect(
-      screen.getByRole("heading", { level: 1, name: "Godeguesi" }),
+      screen.getByRole("heading", { level: 1, name: "Thiago Godeguesi" }),
     ).toBeInTheDocument();
     expect(
       screen.getByText(/Transformando problemas complexos/i),
