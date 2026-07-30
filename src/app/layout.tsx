@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { siteConfig } from "@/content/site";
 import "./globals.css";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://godeguesi.com.br";
-
-const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -41,9 +40,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         {children}
-        {googleAnalyticsId ? (
-          <GoogleAnalytics gaId={googleAnalyticsId} />
-        ) : null}
+        <MicrosoftClarity />
+        <GoogleAnalytics gaId="G-RR6SM5ZP4T" />
       </body>
     </html>
   );
