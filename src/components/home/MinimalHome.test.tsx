@@ -12,7 +12,7 @@ describe("Home", () => {
       screen.getByRole("heading", { level: 1, name: "Thiago Godeguesi" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/Transformando problemas complexos/i),
+      screen.getByText(/Projeto arquiteturas de dados/i),
     ).toBeInTheDocument();
   });
 });
