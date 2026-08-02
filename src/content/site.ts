@@ -3,7 +3,8 @@ export const siteConfig = {
   professionalName: "Thiago Godeguesi",
   role: "Engenheiro de Dados",
   description:
-    "Portfólio profissional com foco em Engenharia de Dados, automação, arquitetura e software.",
+    "Portfólio de Thiago Godeguesi sobre Engenharia de Dados, automação, arquitetura de software e evolução de processos.",
+  url: "https://godeguesi.com.br",
   navigation: [
     { href: "/", label: "Início" },
     { href: "/sobre", label: "Sobre" },
@@ -19,7 +20,7 @@ export const siteConfig = {
 
 export const professionalProfile = {
   statement:
-    "Transformando problemas complexos em soluções de dados, automação e software que evoluem junto com o negócio.",
+    "Projeto arquiteturas de dados, automações e softwares para reduzir desperdícios operacionais, simplificar processos e preparar negócios para crescer com mais controle.",
   introduction:
     "Atuo na modernização de ambientes, automação de processos e evolução de soluções de dados, conectando necessidades técnicas e de negócio com uma abordagem clara, rastreável e sustentável.",
   approach: [
@@ -28,12 +29,36 @@ export const professionalProfile = {
     "Documentar decisões, limites e aprendizados para tornar a evolução viável.",
   ],
   specialties: [
-    "Engenharia e arquitetura de dados",
-    "Automação e integração de processos",
-    "Qualidade, governança e rastreabilidade",
-    "Otimização de custo e desempenho",
-    "Desenvolvimento de soluções com Python e APIs",
-    "Produtos e aplicações SaaS",
+    {
+      title: "Engenharia e arquitetura de dados",
+      description:
+        "Organiza dados e fluxos para que informações sejam confiáveis, acessíveis e preparadas para evoluir.",
+    },
+    {
+      title: "Automação e integração de processos",
+      description:
+        "Conecta etapas e sistemas para reduzir tarefas manuais e tornar rotinas mais consistentes.",
+    },
+    {
+      title: "Qualidade, governança e rastreabilidade",
+      description:
+        "Cria controles que ajudam a entender a origem dos dados, detectar falhas e sustentar decisões.",
+    },
+    {
+      title: "Otimização de custo e desempenho",
+      description:
+        "Avalia processamento e arquitetura para eliminar desperdícios sem comprometer confiabilidade.",
+    },
+    {
+      title: "Desenvolvimento de soluções com Python e APIs",
+      description:
+        "Transforma necessidades em serviços e integrações que simplificam o uso de dados e regras de negócio.",
+    },
+    {
+      title: "Produtos e aplicações SaaS",
+      description:
+        "Estrutura aplicações por etapas, equilibrando entrega do produto, segurança e capacidade de evolução.",
+    },
   ],
   workPrinciples: [
     "Arquitetura evolutiva",

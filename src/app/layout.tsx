@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { siteConfig } from "@/content/site";
+import { siteUrl } from "@/lib/metadata";
 import "./globals.css";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://godeguesi.com.br";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: siteUrl,
   title: {
     default: "Thiago Godeguesi | Engenharia de Dados, Automação e Software",
     template: "%s | Godeguesi",
@@ -23,6 +21,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: "Thiago Godeguesi | Engenharia de Dados, Automação e Software",
     description: siteConfig.description,
+    url: "/",
   },
   twitter: {
     card: "summary",
