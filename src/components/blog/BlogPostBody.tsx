@@ -27,6 +27,19 @@ export function BlogPostBody({ blocks }: { blocks: readonly BlogBlock[] }) {
             </ul>
           );
         }
+        if (block.type === "link") {
+          return (
+            <a
+              className="inline-flex w-fit font-semibold text-accent underline-offset-4 hover:underline"
+              href={block.href}
+              key={`${block.type}-${index}`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {block.text}
+            </a>
+          );
+        }
         return (
           <Text key={`${block.type}-${index}`} size="lg">
             {block.text}
