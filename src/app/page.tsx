@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { CaseStudyCard } from "@/components/case-studies/CaseStudyCard";
@@ -37,7 +38,7 @@ export default function Home() {
   return (
     <SiteLayout>
       <section className="border-b border-border bg-surface-subtle py-section">
-        <Container className="grid gap-10 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
+        <Container className="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
               {siteConfig.role}
@@ -61,12 +62,17 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Card className="space-y-4">
-            <p className="text-sm font-semibold text-accent">
-              Dados, automação e software
-            </p>
-            <Text>{professionalProfile.introduction}</Text>
-          </Card>
+          <div className="overflow-hidden rounded-card border border-border bg-[#071321] shadow-card">
+            <Image
+              alt="Ilustração abstrata de fluxos de dados conectando serviços em uma arquitetura modular."
+              className="h-full w-full object-cover"
+              height={941}
+              priority
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              src="/visual/data-engineering-hero.png"
+              width={1672}
+            />
+          </div>
         </Container>
       </section>
 

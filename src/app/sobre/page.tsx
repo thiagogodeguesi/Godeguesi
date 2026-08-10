@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import React from "react";
 import { SiteLayout } from "@/components/layout/SiteLayout";
@@ -10,19 +11,30 @@ export const metadata: Metadata = createPageMetadata({
   description: `Conheça a atuação e a abordagem profissional de ${siteConfig.professionalName} em dados, automação e software.`,
   path: "/sobre",
 });
+
 export default function AboutPage() {
   return (
     <SiteLayout>
       <Container className="max-w-reading py-section">
         <article className="space-y-10">
-          <header className="space-y-4">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
-              Sobre
-            </p>
-            <Heading level={1}>
-              Dados, automação e produto como partes da mesma evolução.
-            </Heading>
-            <Text size="lg">{professionalProfile.introduction}</Text>
+          <header className="grid gap-8 md:grid-cols-[1fr_13rem] md:items-end">
+            <div className="space-y-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.18em] text-accent">
+                Sobre
+              </p>
+              <Heading level={1}>
+                Dados, automação e produto como partes da mesma evolução.
+              </Heading>
+              <Text size="lg">{professionalProfile.introduction}</Text>
+            </div>
+            <Image
+              alt="Retrato de Thiago Godeguesi."
+              className="aspect-[4/5] w-full max-w-52 rounded-card border border-border object-cover shadow-card"
+              height={1402}
+              sizes="(min-width: 768px) 13rem, 13rem"
+              src="/visual/thiago-godeguesi-portrait.png"
+              width={1122}
+            />
           </header>
           <section className="space-y-4">
             <Heading>Trajetória e perfil técnico</Heading>
