@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { siteConfig } from "@/content/site";
@@ -10,8 +11,9 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-header border-b border-border bg-background/95 py-3 backdrop-blur-sm">
       <Container className="flex flex-wrap items-center justify-between gap-3">
-        <Link className="text-lg font-semibold tracking-tight text-foreground" href="/">
-          {siteConfig.professionalName}
+        <Link className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-foreground" href="/">
+          <Image alt="" aria-hidden="true" height={36} priority src="/brand/tg-mark.svg" width={36} />
+          <span>{siteConfig.professionalName}</span>
         </Link>
         <Button aria-controls="primary-navigation" aria-expanded={open} className="sm:hidden" onClick={() => setOpen((value) => !value)} variant="secondary">
           Menu
