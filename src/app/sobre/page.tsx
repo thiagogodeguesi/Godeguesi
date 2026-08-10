@@ -29,11 +29,11 @@ export default function AboutPage() {
             </div>
             <Image
               alt="Retrato de Thiago Godeguesi."
-              className="aspect-[4/5] w-full max-w-52 rounded-card border border-border object-cover shadow-card"
-              height={1402}
+              className="h-auto w-full max-w-52 rounded-card border border-border shadow-card"
+              height={1536}
               sizes="(min-width: 768px) 13rem, 13rem"
-              src="/visual/thiago-godeguesi-portrait.png"
-              width={1122}
+              src="/visual/thiago-godeguesi-portrait.jpg"
+              width={1024}
             />
           </header>
           <section className="space-y-4">
