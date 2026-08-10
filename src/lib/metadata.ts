@@ -35,3 +35,43 @@ export function createPageMetadata({
     },
   };
 }
+
+type ArticleMetadata = PageMetadata & {
+  publishedTime: string;
+  authors: readonly string[];
+  image: { url: string; alt: string };
+};
+
+export function createArticleMetadata({
+  title,
+  description,
+  path,
+  publishedTime,
+  authors,
+  image,
+}: ArticleMetadata): Metadata {
+  const images = [{ url: image.url, alt: image.alt }];
+  return {
+    title,
+    description,
+    authors: authors.map((name) => ({ name })),
+    alternates: { canonical: path },
+    openGraph: {
+      type: "article",
+      locale: "pt_BR",
+      siteName: siteConfig.name,
+      title,
+      description,
+      url: path,
+      publishedTime,
+      authors: [...authors],
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images,
+    },
+  };
+}

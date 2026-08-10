@@ -9,6 +9,7 @@ export const siteConfig = {
     { href: "/", label: "Início" },
     { href: "/sobre", label: "Sobre" },
     { href: "/estudos-de-caso", label: "Estudos de caso" },
+    { href: "/blog", label: "Blog" },
     { href: "/contato", label: "Contato" },
   ],
   contacts: {
