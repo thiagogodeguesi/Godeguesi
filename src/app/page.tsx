@@ -65,11 +65,11 @@ export default function Home() {
           <div className="overflow-hidden rounded-card border border-border bg-[#071321] shadow-card">
             <Image
               alt="Ilustração abstrata de fluxos de dados conectando serviços em uma arquitetura modular."
-              className="h-full w-full object-cover"
+              className="h-auto w-full"
               height={941}
               priority
               sizes="(min-width: 1024px) 40vw, 100vw"
-              src="/visual/data-engineering-hero.png"
+              src="/visual/data-engineering-hero.jpg"
               width={1672}
             />
           </div>
