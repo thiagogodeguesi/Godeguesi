@@ -1,7 +1,8 @@
 export type BlogBlock =
   | { type: "paragraph"; text: string }
   | { type: "heading"; text: string }
-  | { type: "list"; items: readonly string[] };
+  | { type: "list"; items: readonly string[] }
+  | { type: "link"; text: string; href: string };
 
 export type BlogCover = {
   src: string;
@@ -154,7 +155,7 @@ export const blogPosts: readonly BlogPost[] = [
         text: "Este é o primeiro registro de uma série sobre Inteligência Artificial, Marketing, Dados e Desenvolvimento. Sem fórmulas prontas: com a intenção de transformar estudo em prática \u2014 e prática em algo útil para outras pessoas.",
       },
     ],
-  },,
+  },
   {
     title: "Julho: transformar trabalho acumulado em base para evoluir",
     slug: "julho-2026-transformar-trabalho-em-base",
@@ -178,7 +179,7 @@ export const blogPosts: readonly BlogPost[] = [
       { type: "paragraph", text: "A versão 0.1.0 ganhou uma base mais consistente, com regras de acesso por perfil, controle de assinatura e bloqueio de clínicas, migrações organizadas e validação de isolamento entre clientes. A esteira de testes end-to-end chegou a 17 testes aprovados, cobrindo fluxos importantes da aplicação." },
       { type: "paragraph", text: "Esse tipo de avanço nem sempre aparece para quem usa o produto. Mas é o que torna possível evoluir sem perder confiança a cada mudança." },
       { type: "paragraph", text: "Também consolidamos a estrutura dos repositórios e a organização dos projetos. Parece detalhe, mas é uma forma de reduzir o custo das próximas decisões: saber onde cada parte vive, o que está em andamento e qual é a prioridade real." },
-      { type: "paragraph", text: "Se você quer conhecer melhor a proposta do Olimpo e acompanhar sua evolução, venha conhecer o sistema em https://olimposistema.com.br." },
+      { type: "link", text: "Venha conhecer o sistema e acompanhar a evolução do Olimpo.", href: "https://olimposistema.com.br" },
       { type: "heading", text: "Engenharia de Dados: sair da intenção e entrar em método" },
       { type: "paragraph", text: "Julho também marcou uma retomada mais consciente dos meus estudos em Engenharia de Dados." },
       { type: "paragraph", text: "A conversa deixou de ser apenas ‘preciso voltar a estudar’ e passou a ter direção: um plano compatível com a rotina, foco na certificação Associate da Databricks e acompanhamento de tecnologias que aparecem cada vez mais nos problemas que quero resolver." },
