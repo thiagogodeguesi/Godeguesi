@@ -1,9 +1,24 @@
 import type { Metadata } from "next";
+import { IBM_Plex_Sans, Space_Grotesk } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
 import { siteConfig } from "@/content/site";
 import { siteUrl } from "@/lib/metadata";
 import "./globals.css";
+
+const bodyFont = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const displayFont = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-display-family",
+});
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -39,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html className={`${bodyFont.variable} ${displayFont.variable}`} lang="pt-BR">
       <body>
         {children}
         <MicrosoftClarity />

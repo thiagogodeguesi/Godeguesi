@@ -1,50 +1,57 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import Home from "./page";
-
-vi.mock("next/link", () => ({
-  default: ({
-    children,
-    href,
-  }: {
-    children: React.ReactNode;
-    href: string;
-  }) => <a href={href}>{children}</a>,
-}));
+import { siteConfig } from "@/content/site";
 
 describe("Home", () => {
-  it("renders the primary contact CTA before the secondary case-study CTA", () => {
+  it("apresenta a identidade e a mensagem central no topo", () => {
     render(<Home />);
     expect(
-      screen.getByRole("heading", { level: 1, name: "Thiago Godeguesi" }),
+      screen.getByRole("heading", { level: 1, name: siteConfig.professionalName }),
     ).toBeInTheDocument();
-    const links = screen.getAllByRole("link");
-    const primaryIndex = links.findIndex(
-      (link) => link.textContent === "Falar com Thiago",
-    );
-    const secondaryIndex = links.findIndex(
-      (link) => link.textContent === "Ver estudos de caso",
-    );
-    expect(links[primaryIndex]).toHaveAttribute("href", "/contato");
-    expect(links[secondaryIndex]).toHaveAttribute("href", "/estudos-de-caso");
-    expect(primaryIndex).toBeLessThan(secondaryIndex);
-    expect(
-      screen.getByRole("heading", { name: "Plataforma SaaS de Gestão" }),
-    ).toBeInTheDocument();
+    expect(screen.getAllByText(siteConfig.tagline).length).toBeGreaterThan(0);
   });
 
-  it("explains specialties and groups confirmed technologies by domain", () => {
+  it("prioriza o CTA de projetos e mantém o CTA de conversa", () => {
     render(<Home />);
-    expect(screen.getByText(/Organiza dados e fluxos/i)).toBeInTheDocument();
+    const projetos = screen.getAllByRole("link", {
+      name: /Ver projetos e estudos de caso/i,
+    })[0];
+    const conversa = screen.getAllByRole("link", {
+      name: /Conversar com Thiago/i,
+    })[0];
+    expect(projetos).toHaveAttribute("href", "/estudos-de-caso");
+    expect(conversa).toHaveAttribute("href", "/contato");
+  });
+
+  it("conecta as quatro frentes de atuação", () => {
+    render(<Home />);
+    for (const pillar of [
+      "Dados & Cloud",
+      "Software & Produtos",
+      "Automação & IA",
+      "Direção & Mentoria",
+    ]) {
+      expect(screen.getByRole("heading", { name: pillar })).toBeInTheDocument();
+    }
+  });
+
+  it("destaca projetos reais, trajetória, blog e tecnologias por finalidade", () => {
+    render(<Home />);
+    expect(screen.getByRole("heading", { name: "Olimpo" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Revive" })).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Dados, Analytics e Cloud" }),
+      screen.getByRole("heading", { name: "Mentoria" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Backend e Aplicações" }),
+      screen.getByRole("heading", { name: /Uma trajetória em construção/i }),
     ).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Do blog" })).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "DevOps, Qualidade e Governança" }),
+      screen.getByRole("heading", {
+        name: /Tecnologia organizada por finalidade/i,
+      }),
     ).toBeInTheDocument();
   });
 });

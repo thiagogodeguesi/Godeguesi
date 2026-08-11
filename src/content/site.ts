@@ -2,8 +2,10 @@ export const siteConfig = {
   name: "Godeguesi",
   professionalName: "Thiago Godeguesi",
   role: "Engenheiro de Dados",
+  tagline:
+    "Transformando problemas complexos em soluções de dados, automação e software que evoluem junto com o negócio.",
   description:
-    "Portfólio de Thiago Godeguesi sobre Engenharia de Dados, automação, arquitetura de software e evolução de processos.",
+    "Thiago Godeguesi conecta engenharia de dados, cloud, automação, software e IA aplicada para transformar problemas complexos em soluções que evoluem com o negócio.",
   url: "https://godeguesi.com.br",
   navigation: [
     { href: "/", label: "Início" },
