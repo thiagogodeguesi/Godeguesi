@@ -8,62 +8,69 @@
   --color-muted: var(--text-muted);
   --color-accent: var(--accent-primary);
   --color-accent-strong: var(--accent-strong);
+  --color-highlight: var(--accent-highlight);
   --color-border: var(--border-default);
   --color-border-strong: var(--border-emphasis);
 
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-body), Arial, Helvetica, sans-serif;
+  --font-display: var(--font-display-family), var(--font-body), Arial, sans-serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
-  --spacing-section: clamp(4rem, 8vw, 7rem);
+  --spacing-section: clamp(4.5rem, 9vw, 8rem);
   --spacing-gutter: clamp(1.25rem, 4vw, 2rem);
 
-  --radius-control: 0.75rem;
+  --radius-control: 0.625rem;
   --radius-card: 1rem;
   --radius-pill: 9999px;
 
-  --shadow-card: 0 1rem 3rem
-    color-mix(in srgb, var(--shadow-color) 18%, transparent);
+  --shadow-card: 0 1.25rem 3.5rem
+    color-mix(in srgb, var(--shadow-color) 22%, transparent);
   --shadow-focus: 0 0 0 3px
     color-mix(in srgb, var(--accent-primary) 35%, transparent);
 
-  --container-content: 72rem;
-  --container-reading: 48rem;
+  --container-content: 74rem;
+  --container-reading: 46rem;
 
   --z-header: 40;
   --z-overlay: 50;
 
   --ease-interface: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --default-transition-duration: 180ms;
+  --default-transition-duration: 200ms;
   --default-transition-timing-function: var(--ease-interface);
 }
 
+/* Base escura sofisticada: azul profundo, brancos frios e dourado pontual. */
 :root {
-  color-scheme: light;
-  --surface-background: #f8fafc;
-  --surface-raised: #ffffff;
-  --surface-subtle: #eef2f6;
-  --text-primary: #0f172a;
-  --text-muted: #475569;
-  --accent-primary: #0369a1;
-  --accent-strong: #075985;
-  --border-default: #cbd5e1;
-  --border-emphasis: #94a3b8;
-  --shadow-color: #0f172a;
+  color-scheme: dark;
+  --surface-background: #05080f;
+  --surface-raised: #0b1120;
+  --surface-subtle: #0f1729;
+  --text-primary: #f2f6fb;
+  --text-muted: #a8b6cd;
+  --accent-primary: #74a8ff;
+  --accent-strong: #a9caff;
+  --accent-highlight: #d8b871;
+  --border-default: #1f2b45;
+  --border-emphasis: #33456b;
+  --shadow-color: #000000;
+  --grid-line: color-mix(in srgb, #74a8ff 8%, transparent);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    color-scheme: dark;
-    --surface-background: #020617;
-    --surface-raised: #0f172a;
-    --surface-subtle: #172033;
-    --text-primary: #f8fafc;
-    --text-muted: #cbd5e1;
-    --accent-primary: #67e8f9;
-    --accent-strong: #a5f3fc;
-    --border-default: #334155;
-    --border-emphasis: #64748b;
-    --shadow-color: #000000;
+    color-scheme: light;
+    --surface-background: #f6f8fc;
+    --surface-raised: #ffffff;
+    --surface-subtle: #eaeff8;
+    --text-primary: #0a1122;
+    --text-muted: #47536b;
+    --accent-primary: #16418c;
+    --accent-strong: #0d2c62;
+    --accent-highlight: #8a6a1c;
+    --border-default: #cfd8e6;
+    --border-emphasis: #94a3b8;
+    --shadow-color: #0a1122;
+    --grid-line: color-mix(in srgb, #16418c 10%, transparent);
   }
 }
 
@@ -82,11 +89,61 @@ body {
   color: var(--text-primary);
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
 }
 
 :focus-visible {
   outline: 2px solid var(--accent-primary);
   outline-offset: 3px;
+}
+
+/* Malha técnica discreta usada como profundidade de fundo, sem gradientes fortes. */
+.tech-grid {
+  position: relative;
+  isolation: isolate;
+}
+
+.tech-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 4.5rem 4.5rem;
+  mask-image: radial-gradient(
+    120% 90% at 50% 0%,
+    rgb(0 0 0 / 65%),
+    transparent 70%
+  );
+}
+
+.rule-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+}
+
+.rule-label::before {
+  content: "";
+  width: 1.75rem;
+  height: 1px;
+  background: var(--accent-highlight);
 }
 
 @media (prefers-reduced-motion: reduce) {
