@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" role="img" aria-labelledby="title">
+  <title id="title">TG — Thiago Godeguesi</title>
+  <defs>
+    <linearGradient id="a" x1="22" y1="18" x2="108" y2="112" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#0F172A"/>
+  <path d="M22 31h52v14H55v53H40V45H22V31Z" fill="url(#a)"/>
+  <path d="M102 60v9c0 20-11 31-30 31-20 0-33-14-33-35s13-35 34-35c12 0 22 5 27 13l-12 9c-3-5-8-8-15-8-11 0-18 8-18 21s7 21 18 21c9 0 14-5 15-13H73V60h29Z" fill="#F8FAFC"/>
+  <circle cx="103" cy="26" r="6" fill="#67E8F9"/>
+</svg>
