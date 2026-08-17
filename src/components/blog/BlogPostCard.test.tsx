@@ -9,9 +9,9 @@ describe("BlogPostCard", () => {
     render(<BlogPostCard post={blogPosts[0]} />);
     expect(screen.getByRole("link")).toHaveAttribute(
       "href",
-      "/blog/ia-marketing-ativos",
+      "/blog/documentacao-infraestrutura-de-continuidade",
     );
-    expect(screen.getByText("IA e Marketing")).toBeInTheDocument();
-    expect(screen.getByText("10/08/2026")).toBeInTheDocument();
+    expect(screen.getByText("Dados e Processos")).toBeInTheDocument();
+    expect(screen.getByText("17/08/2026")).toBeInTheDocument();
   });
 });
