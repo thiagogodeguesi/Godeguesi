@@ -29,6 +29,127 @@ export type BlogPost = {
  */
 export const blogPosts: readonly BlogPost[] = [
   {
+    title: "Documentação não é burocracia: é infraestrutura de continuidade",
+    slug: "documentacao-infraestrutura-de-continuidade",
+    description:
+      "O que anos de vivência em Dados e TI me ensinaram sobre documentação, continuidade, rastreabilidade e conhecimento compartilhado.",
+    publishedAt: "2026-08-17",
+    author: "Thiago Godeguesi",
+    category: "Dados e Processos",
+    cover: {
+      src: "/blog/documentacao-conhecimento-compartilhado.webp",
+      alt: "Ilustração da transformação de informações dispersas em um mapa de conhecimento compartilhado por uma equipe.",
+      width: 1672,
+      height: 941,
+    },
+    body: [
+      {
+        type: "paragraph",
+        text: "Em diferentes frentes de trabalho, ficou evidente que a falta de documentação não é um problema isolado. Ela reaparece quando alguém precisa entender um fluxo, investigar uma dependência, assumir uma rotina, corrigir um incidente ou explicar por que determinada decisão foi tomada.",
+      },
+      {
+        type: "paragraph",
+        text: "Nesses longos anos de vivência em Dados e TI, encontrei essa mesma situação repetidas vezes, em contextos diferentes. O padrão era semelhante: o processo funcionava, mas o conhecimento necessário para compreendê-lo estava disperso entre pessoas, códigos, conversas e arquivos sem uma visão consolidada.",
+      },
+      {
+        type: "paragraph",
+        text: "A partir dessa constatação, o trabalho deixou de tratar documentação apenas como registro textual e passou a encará-la como parte da engenharia: um mecanismo para reduzir dependência de memória individual, preservar contexto e permitir continuidade.",
+      },
+      { type: "heading", text: "Quando documentar passa a fazer parte do trabalho" },
+      { type: "heading", text: "O ciclo do cliente" },
+      {
+        type: "paragraph",
+        text: "Em uma das experiências, foi estruturada uma visão do ciclo do cliente, contemplando etapas como entrada, relacionamento, novas ofertas e reconquista. O objetivo foi mostrar não apenas o resultado final, mas como cada etapa nasce, quais dados utiliza, que transformações realiza e quais consumidores dependem dela.",
+      },
+      {
+        type: "paragraph",
+        text: "Esse tipo de visão ajuda a conectar áreas técnicas e de negócio. Um fluxo deixa de ser apenas uma tabela ou uma rotina agendada e passa a ser compreendido dentro da jornada que sustenta.",
+      },
+      { type: "heading", text: "O tombamento de um processo legado" },
+      {
+        type: "paragraph",
+        text: "Em outro contexto, o tombamento de um processo legado exigiu a análise de 26 arquivos relacionados a 55 tabelas. O trabalho envolveu inventariar objetos e atributos, identificar responsáveis e consumidores, mapear dependências e reconhecer lacunas de descrição.",
+      },
+      {
+        type: "paragraph",
+        text: "A análise também considerou sinais objetivos de qualidade, como tabelas sem descrição, campos não documentados, dependências não mapeadas e objetos possivelmente órfãos. Dessa forma, a documentação passou a produzir indicadores para priorização, e não somente páginas para consulta.",
+      },
+      { type: "heading", text: "Dependências e revisão dos fluxos" },
+      {
+        type: "paragraph",
+        text: "Foram analisadas arquitetura, origens, destinos, processos de carga, encadeamentos e pontos de reprocessamento. Esse levantamento permitiu questionar duplicidades e avaliar o consumo direto de dados disponibilizados pela companhia, reduzindo cópias, processamento desnecessário e custos.",
+      },
+      {
+        type: "paragraph",
+        text: "Também foram consideradas oportunidades de padronização, processamento incremental, verificações automatizadas de qualidade e melhoria de desempenho. Nesse cenário, documentar serviu como instrumento de diagnóstico e de decisão técnica.",
+      },
+      { type: "heading", text: "Documentação como entrega contínua" },
+      {
+        type: "paragraph",
+        text: "O aprendizado central foi que a documentação precisa acompanhar o projeto em três momentos: início, execução e encerramento. No início, registra contexto, objetivos, responsáveis e critérios. Durante a execução, preserva decisões, mudanças, riscos e dependências. No encerramento ou passagem, consolida operação, suporte, lições aprendidas e próximos passos.",
+      },
+      { type: "heading", text: "O que uma boa documentação fortalece" },
+      {
+        type: "list",
+        items: [
+          "Continuidade: permite que uma atividade sobreviva a férias, desligamentos, mudanças de equipe e troca de fornecedor.",
+          "Rastreabilidade: registra origem dos dados, transformações, decisões e impactos.",
+          "Redução de retrabalho: evita que diferentes pessoas refaçam o mesmo levantamento.",
+          "Velocidade em incidentes: um mapa de dependências reduz o tempo gasto descobrindo a origem e o impacto de um problema.",
+          "Alinhamento: traduz ativos técnicos para o contexto do processo e aproxima negócio e tecnologia.",
+          "Qualidade e governança: torna visíveis lacunas, objetos órfãos e responsabilidades indefinidas.",
+          "Base para automação e IA: processos bem descritos oferecem contexto mais confiável para buscas, agentes e automações.",
+        ],
+      },
+      { type: "heading", text: "Onde a documentação costuma falhar" },
+      {
+        type: "list",
+        items: [
+          "Criada somente no final: nasce atrasada e baseada em memória.",
+          "Desatualização: quando atualizar não faz parte do fluxo, o documento perde credibilidade.",
+          "Excesso de volume e pouco contexto: muitas páginas não garantem utilidade.",
+          "Conhecimento concentrado: a pessoa que “sabe tudo” mascara a ausência de uma fonte compartilhada.",
+          "Fragmentação: informações espalhadas em e-mails, chats, planilhas, tickets e repositórios impedem uma visão única.",
+          "Falta de responsável: sem dono, periodicidade e critério de atualização, a manutenção fica para depois.",
+          "Padronização rígida demais: templates extensos podem criar burocracia sem melhorar a compreensão.",
+          "Documentação sem validação: um documento pode parecer completo e ainda estar incorreto.",
+        ],
+      },
+      { type: "heading", text: "O paradoxo da documentação" },
+      {
+        type: "paragraph",
+        text: "O principal ponto fraco da documentação não está na documentação em si, mas na forma como ela costuma ser tratada. Quando vira obrigação apartada do trabalho, é percebida como custo. Quando é produzida junto com a análise, a decisão e a entrega, passa a reduzir risco e economizar tempo.",
+      },
+      {
+        type: "paragraph",
+        text: "Também existe um equilíbrio necessário. Documentar pouco mantém o conhecimento invisível; documentar tudo sem critério cria um acervo difícil de manter. A documentação útil registra o que alguém precisará saber para compreender, operar, modificar ou assumir o processo com segurança.",
+      },
+      { type: "heading", text: "Princípios que levo dessa experiência" },
+      {
+        type: "list",
+        items: [
+          "Começar pelo contexto e pelo problema, não pela ferramenta.",
+          "Registrar responsáveis, consumidores, dependências e impactos.",
+          "Documentar decisões e mudanças enquanto elas acontecem.",
+          "Manter o conteúdo próximo do fluxo de trabalho e de quem o utiliza.",
+          "Usar inventários e indicadores para revelar lacunas e orientar prioridades.",
+          "Validar a documentação contra a realidade: código, dados, agenda de execução e operação.",
+          "Definir um nível suficiente de detalhe, protegendo informações sensíveis.",
+          "Tratar a passagem de conhecimento como uma entrega, não como uma conversa informal.",
+        ],
+      },
+      { type: "heading", text: "Documentar é reduzir incerteza" },
+      {
+        type: "paragraph",
+        text: "A documentação não deve ser medida pelo número de páginas, mas pela quantidade de incerteza que ela remove. Seu valor aparece quando outra pessoa consegue entender uma decisão, localizar uma dependência, operar um processo ou dar continuidade a um projeto sem depender exclusivamente de quem o criou.",
+      },
+      {
+        type: "paragraph",
+        text: "O mapeamento do ciclo do cliente, o tombamento legado e a análise de dependências mostraram que documentar também revela duplicidades, riscos, desperdícios e oportunidades de simplificação. É assim que conhecimento individual se transforma em capacidade coletiva.",
+      },
+    ],
+  },
+  {
     title:
       "IA, Marketing e ativos: o que levei de um fim de semana intenso de aprendizado",
     slug: "ia-marketing-ativos",
