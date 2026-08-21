@@ -7,7 +7,7 @@ const whatsapp = "https://api.whatsapp.com/send?phone=5583981330155&text=Eu%20vi
 
 const audience = ["Quer entrar na tecnologia", "Estuda assuntos desconectados", "Ainda não sabe qual área seguir", "Tem dificuldade em transformar cursos em prática", "Quer construir projetos", "Precisa organizar os próximos passos", "Quer conhecer o mercado antes de se especializar"];
 const cycle = [["Avaliar", "Entendemos seu momento atual."], ["Definir", "Escolhemos o objetivo do ciclo."], ["Planejar", "Organizamos estudos e entregas."], ["Executar", "Você transforma plano em prática."], ["Acompanhar", "Corrigimos obstáculos no caminho."], ["Revisar", "Analisamos o que foi desenvolvido."], ["Evoluir", "Definimos o próximo ciclo."]];
-const benefits = [["Diagnóstico inicial", "Entendimento do seu momento, experiência, objetivos, interesses e disponibilidade."], ["Trilha personalizada", "Uma sequência de estudos construída conforme o seu objetivo — e não uma grade pronta."], ["Ciclo mensal", "Um objetivo principal por período, com direção clara e espaço para ajustar a rota."], ["Plano de ação", "Entregas e estudos objetivos para avançar entre um encontro e outro."], ["Até 4 encontros", "Encontros individuais usados conforme a necessidade e a finalidade de cada ciclo."], ["Materiais complementares", "Cursos, vídeos, documentação, exercícios e referências escolhidos para você."], ["Projetos práticos", "O aprendizado se transforma em entregas reais sempre que possível."], ["Revisão de evolução", "Analisamos os resultados e decidimos juntos o próximo ciclo."]];
+const benefits = [["Diagnóstico inicial", "Entendimento do seu momento, experiência, objetivos, interesses e disponibilidade."], ["Trilha personalizada", "Uma sequência de estudos construída conforme o seu objetivo — e não uma grade pronta."], ["Ciclo mensal", "Um objetivo principal por período, com direção clara e espaço para ajustar a rota."], ["Plano de ação", "Entregas e estudos objetivos para avançar entre um encontro e outro."], ["Até 4 encontros individuais por mês", "Encontros individuais usados conforme a necessidade e a finalidade de cada ciclo."], ["Materiais complementares", "Cursos, vídeos, documentação, exercícios e referências escolhidos para você."], ["Projetos práticos", "O aprendizado se transforma em entregas reais sempre que possível."], ["Revisão de evolução", "Analisamos os resultados e decidimos juntos o próximo ciclo."]];
 const faqs = [["Preciso saber programar?", "Não. A mentoria pode começar antes da escolha de uma linguagem ou área."], ["Preciso saber qual área quero seguir?", "Não. Descobrir uma direção possível faz parte do diagnóstico inicial."], ["Existe uma trilha igual para todo mundo?", "Não. A trilha é ajustada ao seu objetivo, momento e disponibilidade."], ["São quatro reuniões obrigatórias?", "Há até quatro encontros por ciclo, distribuídos conforme a necessidade."], ["A mentoria fornece cursos?", "Os materiais são recomendados conforme a trilha; o foco é combinar referência e prática."], ["Vou conseguir um emprego depois da mentoria?", "A mentoria não promete contratação. Ela ajuda a construir repertório, projetos e clareza para os próximos passos."]];
 
 export const metadata: Metadata = {
@@ -36,7 +36,47 @@ export default function MentoriaPage() {
     <Section eyebrow="Exemplo de ciclo" title={<>Mês 1 — <em>Fundamentos e direção</em></>}><p className="mentoria-copy">Revisamos o que você conseguiu desenvolver e definimos o próximo ciclo.</p><ol className="mentoria-timeline">{["Diagnóstico", "Área inicial de exploração", "Ambiente de estudos", "Git e GitHub", "Fundamentos técnicos", "Primeira entrega prática", "Revisão"].map((item, index) => <li key={item}><b>{String(index + 1).padStart(2, "0")}</b>{item}</li>)}</ol></Section>
     <Section eyebrow="Terminou antes?" title={<>Você terminou antes do planejado? <em>Ótimo.</em></>}><p className="mentoria-copy">Não é necessário esperar o próximo ciclo. Podemos adicionar exercícios, aprofundamento, materiais, desafios ou preparar os próximos conhecimentos.</p><p className="mentoria-copy">A ideia não é limitar sua velocidade. É manter uma sequência coerente.</p></Section>
     <Section eyebrow="Por que trabalhar em ciclos?" title={<>A própria tecnologia nos ensina a <em>evoluir por etapas.</em></>}><p className="mentoria-copy">Assim como na tecnologia trabalhamos com Sprints — períodos definidos para executar um conjunto de tarefas e avaliar os resultados —, na mentoria cada ciclo tem objetivos claros, execução, acompanhamento e revisão.</p><div className="mentoria-flow">{["Planejar", "Executar", "Revisar", "Ajustar", "Evoluir"].map((item, index) => <span key={item}><b>{String(index + 1).padStart(2, "0")}</b>{item}</span>)}</div><p className="mentoria-copy">Você não planeja a carreira inteira de uma vez. Planeja o próximo ciclo, aprende com o resultado e decide o próximo passo.</p></Section>
-    <Section id="investimento" eyebrow="Investimento" title="Clareza para o próximo passo."><p className="mentoria-copy">Uma parceria de 12 meses, individual e construída ao redor do seu momento.</p><div className="mentoria-price"><p>Mentoria individual</p><div><sup>R$</sup> <strong>995,11</strong></div><p>Start inicial</p><hr/><p><strong>Depois, 11 mensalidades de R$ 499,99.</strong></p><ul>{["Diagnóstico e planejamento individual", "Trilha personalizada", "Até 4 encontros", "Acompanhamento e materiais", "Próximas entregas e revisão do ciclo"].map(item => <li key={item}>✓ {item}</li>)}</ul><p>Investimento total para 12 meses: R$ 6.495,00.</p><p>Caso prefira fechar o pacote anual, o investimento será de R$ 5.500,00 à vista.</p><a className="mentoria-button" href={whatsapp}>Quero conversar sobre a mentoria <span>↗</span></a></div></Section>
+    <Section id="investimento" eyebrow="Investimento" title="Clareza para o próximo passo.">
+      <p className="mentoria-copy">
+        Uma parceria de 12 meses, individual e construída ao redor do seu momento.
+      </p>
+
+      <div className="mentoria-price">
+        <p>Mentoria individual</p>
+
+        <div>
+          <sup>R$</sup> <strong>1.600,00</strong>
+        </div>
+
+        <p>Start inicial</p>
+
+        <hr/>
+
+        <p>
+          <strong>Depois, 11 mensalidades de R$ 499,99.</strong>
+        </p>
+
+        <ul>
+          {[
+            "Diagnóstico e planejamento individual",
+            "Trilha personalizada",
+            "Até 4 encontros individuais por mês",
+            "Acompanhamento e materiais",
+            "Próximas entregas e revisão do ciclo"
+          ].map(item => <li key={item}>✓ {item}</li>)}
+        </ul>
+
+        <p>Investimento total para 12 meses: R$ 7.099,89.</p>
+
+        <p>
+          Caso prefira fechar o pacote anual, o investimento será de R$ 6.400,00 à vista.
+        </p>
+
+        <a className="mentoria-button" href={whatsapp}>
+          Quero conversar sobre a mentoria <span>↗</span>
+        </a>
+      </div>
+    </Section>
     <Section id="faq" eyebrow="Perguntas frequentes" title={<>Antes de começar, <em>vale saber.</em></>}>{faqs.map(([question, answer], index) => <details className="mentoria-faq" key={question}><summary><b>{String(index + 1).padStart(2, "0")}</b>{question}<span>+</span></summary><p>{answer}</p></details>)}</Section>
     <section className="mentoria-closing"><div className="mentoria-wrap"><p className="mentoria-eyebrow">Seu próximo ciclo pode começar agora</p><h2>Você não precisa aprender tudo. <em>Precisa descobrir qual é o próximo passo.</em></h2><p className="mentoria-copy">Se existe informação demais e direção de menos, podemos construir esse caminho juntos.</p><a className="mentoria-button" href={whatsapp}>Quero conhecer a mentoria <span>↗</span></a></div></section>
     <footer className="mentoria-footer"><a href="#inicio" className="mentoria-brand"><Image src="/visual/mentoria/tg-mark.svg" alt="" width={36} height={36}/><span>Mentoria<br/>Godeguesi</span></a><p>© 2026 Thiago Godeguesi</p><a href="https://godeguesi.com.br">godeguesi.com.br ↗</a></footer>
