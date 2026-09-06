@@ -58,17 +58,6 @@ export default function ContactPage() {
                   GitHub
                 </a>
               </li>
-              <li>
-                <a
-                  aria-label={`Abrir GitHub de ${siteConfig.professionalName} em nova aba`}
-                  className="font-semibold text-accent hover:text-accent-strong"
-                  href={siteConfig.contacts.github}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Whatsapp
-                </a>
-              </li>
             </ul>
           </section>
         </article>
